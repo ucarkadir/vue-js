@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+  <style>
+    .is-active {
+      color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <p v-bind:class="isActive ? activeClass : ''">
+        Lorem ipsum dolor sit amet consectetur
+    </p>
+
+    <p v-bind:class="[isActive ? activeClass : '', 'l-grid']">
+        Lorem ipsum dolor sit amet consectetur
+      </p>
+<span>Class tanımlyarak işlemi yapmak</span>
+      <p v-bind:class="classDecider">
+          Lorem ipsum dolor sit amet consectetur
+        </p>
+
+        <span>inline style tanımlama</span>
+        <p :class="classDecider" :style="{fontSize: '25px'}">
+            Lorem ipsum dolor sit amet consectetur
+        </p>
+      
+  </div>
+  <script src="./app.js"></script>
+</body>
+
+</html>

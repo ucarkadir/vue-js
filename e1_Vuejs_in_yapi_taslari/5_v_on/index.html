@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <style>
+    button{
+      width: 100%;
+      height: 50px;
+      position: relative;
+      display: block;
+    }
+    
+    .rect{
+      width: 40px;  
+      height: 30px;
+      background: red;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+  </style>
+  </head>
+  <body>
+    <div id="app">
+     <button v-on:click="onClick">Tuşa bas</button>
+     <span>Genellikle @ işareti kullanılıyor. </span>
+     <button @click.self="onClick">
+       Tuşa bas ama kırmızıya basınca çalışmıyor
+       <div class="rect"> </div>
+     </button>
+     <p>{{sayac}} </p>
+  </div>
+  <script src="./app.js" ></script>
+</body>
+</html>

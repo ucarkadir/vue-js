@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-model="text">
+        <div v-if="text.length > 0">
+            v-if html de gösterilmedi           
+            statik olarak  
+            Örneğin müşteri aktif pasif olma durumunda kullanılabilir
+        </div>
+
+        <div v-else > burayada başka bir text yazalım</div>
+
+        <div v-show="text.length > 0">
+                v-show displan : none olarak atandı     
+                dinamik olarak (değişken)
+                uygulama esnasıda göster / gizle durumlarından     
+
+            </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+
+</html>

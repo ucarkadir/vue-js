@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-model="text" />
+
+        <h1>Model Modifier</h1>
+        <input type="text" v-model.trim="text" />
+        <p>{{text}}</p>
+
+        <h2>Mod. Number</h2>
+        <input type="text" v-model.number="text2" />
+        <p>{{text2}}</p>
+        <div v-if="typeof text2 === 'string'">
+            metnin string
+        </div>
+
+        <h2>Mod. Lazy</h2>
+        <input type="text" v-model.lazy="text3" />
+        <p>{{text3}}</p>
+
+        <h2>Cehckox</h2>
+        <div>
+            <input type="checkbox" value="yumurta" v-model="alacaklarim">
+            <label for="">Yumurta</label>
+        </div>
+
+        <div>
+            <input type="checkbox" value="sut" v-model="alacaklarim">
+            <label for="">Süt</label>
+        </div>
+
+        <div>
+            <input type="checkbox" value="ekmek" v-model="alacaklarim">
+            <label for="">Ekmek</label>
+        </div>
+
+        <div>{{ alacaklarim }}</div>
+
+    </div>
+    <script src="./app.js"></script>
+</body>
+
+</html>
