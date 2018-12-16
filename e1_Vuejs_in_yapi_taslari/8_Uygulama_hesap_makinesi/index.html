@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <style>
+        input[type=number] {
+            width: 30px;
+            height: 20px;;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="hesap-makinesi">
+        <span><input type="number" v-model.number="sayi1"></span>
+        <span>
+            <select v-bind="secilen_islem" @change="onChange" >
+                <option :value="islem" v-for="islem in islemler" >                    
+                    {{ islem || (sayi1 + sayi2) }}
+                </option>
+            </select>
+        </span>
+        <span><input type="number" v-model.number="sayi2"></span>
+        <span>=</span>
+        <span> {{ sonuc }} </span>
+    </div>
+    <script src="./app.js"></script>
+</body>
+
+</html>
