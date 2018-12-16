@@ -7,26 +7,35 @@
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
+    <style>
+      h2{
+        margin-top: 0.2em;
+      }
+      input{
+        margin-top: 5px;
+        width: 200px;
+      }
+    </style>
   </head>
   <body>
     <div id="app">
-      <ul>
-        <li v-for="arkadasim in liste" v-bind:key="arkadasim" >
-          {{arkadasim}}
-          <input type="text" />
-        </li>
-        
-        <li v-for="(arkadasim, i) in liste" >
-        {{i}} {{arkadasim}}
-      </li>
-      
-      <li v-for="(ozellik, key, index) in arkadasim">
-        {{index}}
-        {{key}}
-        {{ozellik}}       
-      </li>
-    </ul>
-    <button v-on:click='rasgeleliste'>rasgele liste</button>
+      <p>v-html: HTML kodunu string olarak kullanmamıza sağlar</p>
+      <p>v-text: her hangi bir texti elementin içinde gösterir.</p>
+      <p>v-once: sadece bir kere kendini update ediyor.</p>
+
+      <hr>
+
+      <h2>v-html</h2>
+      <div v-html='text1'></div>
+
+      <h2>v-text</h2>
+      <div v-text='text2'></div>
+
+      <h2>v-once</h2>
+      <div v-once>
+        {{text3}}
+      </div>
+      <input type="text" v-model="text3">
   </div>
   <script src="./app.js" ></script>
 </body>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        {{textContainer.text}}
+        <br>
+        <button @click="onClick"> yeni özellik ekle </button>
+        <br>
+        <input type="text" v-model="textContainer.text">
+        <br>
+
+        <span>Bu özellik Vue oluşturulurken olmadığı için boş olur,
+            butona tıklasak bile oluşmadğı için dolmaz.</span>
+            <hr>
+            <span>yeni properti ekleyebilmek için Vue.Set() methodunu kullanmalıyız.</span>          
+            <span v-html="textContainer.text2" >  </p>
+<hr>
+<span>  * dom dan objeyi çıkarmak istiyorsak. <br>
+        * Object.freeze<br>
+        * belli başlı objelerin değeri değişmiyorsa <br>
+        * bir kez oluşturulur sonra silinir.</span>        
+
+    </div>
+    <script src="./app.js"></script>
+</body>
+
+</html>

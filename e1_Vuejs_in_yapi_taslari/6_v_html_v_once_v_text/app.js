@@ -1,16 +1,8 @@
 new Vue({
-  el: '#app',
-  data: {
-    liste: ['ali', 'veli', 'kemal'],
-    arkadasim: {
-      isim: 'gizem',
-      yas: 25,
-      meslek: 'programci'
-    }
-  },
-  methods: {
-    rasgeleliste() {
-      this.liste = this.liste.sort(() => Math.random() - 0.5)
-    }
+  el:"#app",
+  data:{
+    text1: '<a href="https://google.com">google.com</a>',
+    text2: 'Lorem ipsum dolor sit amet consectetur  ',
+    text3: 'Bu kod hiç bir zaman değişmiyor.'
   }
 })
