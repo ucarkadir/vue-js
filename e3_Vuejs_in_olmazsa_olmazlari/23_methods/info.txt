@@ -1,0 +1,61 @@
+# methods 
+
+* vue instance icin çeşitli fonsiyonların tanımlanığı yer.
+* bu fonsiyonları genelde direktifler için tanımlanıyorlar
+* fonsiyonları tanımlarken arrow fonsiyonlarını kullanmıyoruz. 
+
+# compudet property 
+
+* data objesinde tanıladığımız property lere ek olarak 
+  drinamik property ler oluşturmamıza olanak sağlar.
+* bu poperty lerin değerleri cach te tutulur. 
+* sadece bağıl olduğu dependecy lerin değeri değişirse güncellenir. 
+
+# compudet v methods farkları
+
+Computed
+
+sadace depedency ler değiştiği zaman çağrılır. 
+elde edilen sonuçlar cache te tutulur.
+Templetlerimizde property olarak kullanılırlar.
+default olarak sadece getter fakat setter da tanımlanabiliyor. 
+
+methods
+
+her update olduğunda çağrılır.
+cache kullanılmıyor.
+genelde event listener lar için kullaılırlar. 
+her getter hem setter olarak kullanılır. 
+
+
+# watchers 
+
+* data objesinde tanımladığımız property lerin değerlerini takip etmek için kullanılır. 
+* property lerin değeri değiştiği zaman cağrılır.
+* genelde asychoronous işlemler için kullanılır
+
+* iki tane parametre alıyor.
+
+
+# lifecycle hooks
+
+* instance ya da componet lerimizin çeşitli yaşam döngüsü 
+  aşamalarında kullanmamız için bize fonsiyonlar sağlar. 
+* beforeCreate , created, beforeMount, mounted, beforeUpdate, updated, beforeDestroy, destroyed
+
+    Creation Hooks(beforeCreate, created): Reactivity ve event lerin oluşturduğu yer.
+    
+    Mounting Hooks(beforeMount, mounted): en çok kullanılan hook lar. 
+    Genele Component imizin DOM a eklendikten sonray ya da 
+    eklenmeden önce DOM da değişiklik yapmak için kullınılır.
+
+    Updating Hook(beforeUpdate, updated): Reactive property ler değişince ya da
+    Component imiz re-render 
+
+    Destuructions Hooks(beforeDestroy, destroyed): Componet imiz DOM dan çıkarılmadan 
+    önce ve çıkarıldıktan sonra çağrılır. 
+
+* bu hook lar direk olarak instance a bağlanır. 
+  dolayısıyla fonsiyonları tanımlarken arrow fonsiyonlarını kullanmıyoruz. 
+
+

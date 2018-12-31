@@ -1,0 +1,7 @@
+vue.js olmazsa olmazları
+
+methods
+compudet
+watchers(gözlemciler)
+lifecycle hooks (yaşam döngüsü kacaları)
+
